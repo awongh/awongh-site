@@ -1,89 +1,832 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>awongh</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="awongh">
-    <meta name="author" content="awongh">
+<!doctype html>
+<html class="no-js" lang="">
 
-    <!-- Le styles -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/awongh/static/awh.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Muli:800" rel="stylesheet">
 
-    <!-- Le fav and touch icons -->
-	<link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/awongh/static/awh.ico" type="image/x-icon">
+<style>
+/* START NORMAILIZE */
 
-  </head>
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
-  <body data-spy="scroll" data-target=".subnav" data-offset="50">
-    <div class="container">
+/* Document
+   ========================================================================== */
 
-<!-- Masthead
-================================================== -->
-      <header class="jumbotron subhead" id="overview">
-        <div id="shapes-header-cont">
-            <h1 class="mehead">awongh</h1>
-            <p class="lead">web programming</p>
-            <div class="subnav">
-              <ul class="nav nav-pills">
-                <li><a href="#about">about</a></li>
-                <li><a href="#contact">contact</a></li>
-              </ul>
-            </div>
-            <div id="shapes"></div>
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
 
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+/* END NORMAILIZE */
+
+/* START BOILERPLATE MAIN */
+
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* END BOILERPLATE MAIN */
+
+/* START APP STYLES */
+
+
+
+
+
+
+.cube-container {
+  perspective: 2000px;
+  perspective-origin: 50% 50%;
+}
+.cube {
+  transform: rotateX( 13deg ) rotateY( 13deg ) rotateZ(-2deg);
+
+  transform-style: preserve-3d;
+  > div {
+    backface-visibility: show;
+  }
+}
+.cube .front  { background-color:white; transform: rotateY(   0deg ) translateZ( 100px ); }
+.cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
+.cube .right  { transform: rotateY(  90deg ) translateZ( 100px ); }
+.cube .left   { transform: rotateY( -90deg ) translateZ( 100px ); }
+.cube .top    {
+  height:200px;
+  transform: rotateX(  90deg ) translateZ( 100px );
+}
+.cube .bottom {
+  height:200px;
+  transform: rotateX( -90deg ) translateZ( 400px );
+}
+
+
+body {
+  font-family: 'Muli', sans-serif;
+  background: blue;
+  color: rgba(255,255,255,0.8);
+  font-family: sans-serif;
+  font-weight:800;
+}
+.cube-container {
+  width: 200px; height: 500px;
+  left: 50%; top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: perspective 700ms;
+}
+.cube {
+  width: 100%; height: 100%;
+  position: absolute;
+  transition: transform 700ms;
+}
+.cube > div {
+  height: 100%; width: 100%;
+  background-color: rgba(256,256,256,0.4);
+
+  color: blue;
+  border: none;
+  position: absolute;
+  font-size: 30px;
+  text-align: center;
+}
+.cube > .front{
+  background-color: rgba(179, 186, 204, .8);
+}
+
+.cube > .bottom{
+  background-color: rgba(246,246,246,0.8);
+}
+
+.cubetext{
+  margin:10px;
+  padding:10px;
+  letter-spacing:7px;
+}
+
+
+
+.container {
+  background-color:yellow;
+  width: 100%;
+  padding: 10px 10px;
+  margin-right: auto;
+  margin-left: auto;
+  position:relative;
+}
+.hero{
+  background-color:pink;
+  margin:20px 20px 20px 20px;
+  height:80vh;
+  padding:15px 10px;
+  position:relative;
+}
+
+.hero1{
+  margin-bottom:55px;
+}
+
+.hero2{
+
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 340px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+  }
+}
+</style>
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div class="container">
+
+    <div class="hero hero1">
+
+      <div class="cube-container">
+        <div class="cube">
+          <div class="front">
+            <p class="cubetext">hello world</p>
+            <p class="cubetext">hello world</p>
+            <p class="cubetext">hello world</p>
+            <p class="cubetext">hello world</p>
+          </div>
+          <div class="bottom"></div>
+          <div class="top"></div>
+          <div class="left"></div>
+          <div class="right"></div>
         </div>
-      </header>
-
-<div id="main-stuff" class="container">
-    <div id="about" class="">
-        <p>awongh is akira wong.</p>
-        <p>web development in ruby, php or js.</p>
-        <p>making useful things, thinking about design, and using nice tools.</p>
-        <p>occasionally designing and making <a href="lamps">lamps.</a></p>
+      </div>
     </div>
-    <hr class="soften"/>
-    <div id="contact" class="">
-        <p><a href="http://awongh.github.io/blog">blog.</a></p>
-        <p><a href="http://www.github.com/awongh">github.</a></p>
-        <p><a href="http://www.twitter.com/awongh">twitter.</a></p>
-        <p><a href="http://stackoverflow.com/users/271932/awongh">stackoverflow.</a></p>
-        <p><a href="http://www.linkedin.com/pub/akira-wong/19/756/3b1">linkedin.</a></p>
-        <p><a href="https://www.instagram.com/awongh/">instagram.</a></p>
-        <p>email at: <a href="mailto:akira@awongh.com">akira@awongh.com.</a></p>
+    <div class="hero hero2">
 
-        
-
-    </div>
-</div>
-
-     <!-- Footer
-      ================================================== -->
-      <footer class="footer">
-        <div id="footer-text">
-            <p class="footer-stuff pull-right"><a href="#">Back to top</a></p>
+      <div class="cube-container">
+        <div class="cube">
+          <div class="front">
+            <p class="cubetext">hello world</p>
+            <p class="cubetext">hello world</p>
+            <p class="cubetext">hello world</p>
+            <p class="cubetext">hello world</p>
+          </div>
+          <div class="bottom"></div>
+          <div class="top"></div>
+          <div class="left"></div>
+          <div class="right"></div>
         </div>
-        <div id="bottom-shapes"></div>
-      </footer>
+      </div>
 
-    </div><!-- /container -->
+    </div>
+  </div>
 
-    <!-- Le javascript
-    ================================================== -->
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-11316091-1");
-pageTracker._setDomainName("none");
-pageTracker._setAllowLinker(true);
-pageTracker._trackPageview();
-} catch(err) {}</script>
-  </body>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-11316091-1', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
 </html>

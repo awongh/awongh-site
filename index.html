@@ -1,679 +1,236 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>awongh</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="awongh akira wong web developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/awongh/static/awh.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Muli:800" rel="stylesheet">
+    <link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/awongh/static/awh.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Muli:800" rel="stylesheet">
 
-<style>
-/* START APP STYLES */
-#gradient
-{
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-  flex: 1 1 auto;
-}
+    <style>
+      #gradient
+      {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        flex: 1 1 auto;
+      }
 
-.cube-container {
-  perspective: 2000px;
-  perspective-origin: 50% 50%;
-}
-.cube {
-  transform: rotateX( 13deg ) rotateY( 13deg ) rotateZ(-2deg);
+      .cube-container {
+        perspective: 2000px;
+        perspective-origin: 50% 50%;
+      }
+      .cube {
+        transform: rotateX( 13deg ) rotateY( 13deg ) rotateZ(-2deg);
 
-  transform-style: preserve-3d;
-  > div {
-    backface-visibility: show;
-  }
-}
-.cube .front  {
-  background-color:white; transform: rotateY(   0deg ) translateZ( 100px );
-}
-.cube .back   {
-  transform: rotateX( 180deg ) translateZ( 100px );
-}
-.cube .right  {
-  transform: rotateY(  90deg ) translateZ( 100px );
-}
-.cube .left   {
-  transform: rotateY( -90deg ) translateZ( 100px );
-}
-.cube .top    {
-  height:200px;
-  transform: rotateX(  90deg ) translateZ( 100px );
-}
-.cube .bottom {
-  height:200px;
-  transform: rotateX( -90deg ) translateZ( 400px );
-}
+        transform-style: preserve-3d;
+        > div {
+          backface-visibility: show;
+        }
+      }
+      .cube .front  {
+        background-color:white; transform: rotateY(   0deg ) translateZ( 100px );
+      }
+      .cube .back   {
+        transform: rotateX( 180deg ) translateZ( 100px );
+      }
+      .cube .right  {
+        transform: rotateY(  90deg ) translateZ( 100px );
+      }
+      .cube .left   {
+        transform: rotateY( -90deg ) translateZ( 100px );
+      }
+      .cube .top    {
+        height:200px;
+        transform: rotateX(  90deg ) translateZ( 100px );
+      }
+      .cube .bottom {
+        height:200px;
+        transform: rotateX( -90deg ) translateZ( 400px );
+      }
 
 
-body {
-  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
-  padding: 0px;
-  margin: 0px;
-  font-family: 'Muli', sans-serif;
-  font-family: sans-serif;
-  font-weight:800;
-  display:flex;
-  margin-top:20px;
-}
-.cube-container {
-  width: 200px; height: 500px;
-  left: 50%; top: 50%;
-  position: absolute;
-  transform: translate(-50%, -58%);
-}
-.cube {
-  width: 100%; height: 100%;
-  position: absolute;
-}
-.cube > div {
-  height: 100%; width: 100%;
-  background-color: rgba(256,256,256,0.4);
+      body {
+        background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Muli', sans-serif;
+        font-family: sans-serif;
+        font-weight:800;
+        display:flex;
+        margin-top:20px;
+      }
+      .cube-container {
+        width: 200px; height: 500px;
+        left: 50%; top: 50%;
+        position: absolute;
+        transform: translate(-50%, -58%);
+      }
+      .cube {
+        width: 100%; height: 100%;
+        position: absolute;
+      }
+      .cube > div {
+        height: 100%; width: 100%;
+        background-color: rgba(256,256,256,0.4);
 
-  color: blue;
-  border: none;
-  position: absolute;
-  font-size: 16px;
-  text-align: center;
-}
-.cube > .front{
-  display:flex;
-  align-items:center;
-  background-color: rgba(256, 256, 256, .8);
-}
+        color: blue;
+        border: none;
+        position: absolute;
+        font-size: 16px;
+        text-align: center;
+      }
+      .cube > .front{
+        display:flex;
+        align-items:center;
+        background-color: rgba(256, 256, 256, .8);
+      }
 
-.cube > .bottom{
-  background-color: rgba(246,246,246,0.8);
-}
+      .cube > .bottom{
+        background-color: rgba(246,246,246,0.8);
+      }
 
-.cubetext{
-  margin:10px;
-  padding:10px;
-  letter-spacing:17px;
-}
+      .cubetext{
+        margin:10px;
+        padding:10px;
+        letter-spacing:17px;
+      }
 
-.email{
-  margin:1px;
-  padding:1px;
-  letter-spacing:8px;
-  font-size:11px;
+      .email{
+        margin:1px;
+        padding:1px;
+        letter-spacing:8px;
+        font-size:11px;
 
-}
-.top-text{
-  padding-top:26px;
-}
-.bottom-text{
-  padding-top:46px;
-}
+      }
+      .top-text{
+        padding-top:26px;
+      }
+      .bottom-text{
+        padding-top:46px;
+      }
 
-.mojilink{
-  letter-spacing:0px;
-}
-.link{
-  letter-spacing:5px;
-    font-size:12px;
-}
+      .mojilink{
+        letter-spacing:0px;
+      }
+      .link{
+        letter-spacing:5px;
+          font-size:12px;
+      }
 
-.container {
-  width: 100%;
-  padding: 10px 10px;
-  margin-right: auto;
-  margin-left: auto;
-  position:relative;
-}
-.hero{
-  margin:20px 20px 20px 20px;
-  min-height:550px;
-  padding:15px 10px;
-  position:relative;
-}
+      .container {
+        width: 100%;
+        padding: 10px 10px;
+        margin-right: auto;
+        margin-left: auto;
+        position:relative;
+      }
+      .hero{
+        margin:20px 20px 20px 20px;
+        min-height:550px;
+        padding:15px 10px;
+        position:relative;
+      }
 
-.hero1{
-  margin-bottom:55px;
-}
+      .hero1{
+        margin-bottom:55px;
+      }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 340px;
-  }
-}
+      @media (min-width: 576px) {
+        .container {
+          max-width: 340px;
+        }
+      }
 
-@media (min-width: 768px) {
-  .container {
-  }
-}
+      @media (min-width: 768px) {
+        .container {
+        }
+      }
 
-@media (min-width: 992px) {
-  .container {
-  }
-}
+      @media (min-width: 992px) {
+        .container {
+        }
+      }
 
-@media (min-width: 1200px) {
-  .container {
-  }
-}
+      @media (min-width: 1200px) {
+        .container {
+        }
+      }
 
 
 
-</style>
-</head>
+    </style>
+  </head>
+  <body>
+    <div id="gradient">
+      <div class="container">
 
-<body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+      <div class="hero hero1">
 
- <div id="gradient">
-   <div class="container">
-
-    <div class="hero hero1">
-
-      <div class="cube-container">
-        <div class="cube">
-          <div class="front">
-            <div class="f-cont">
-              <p class="cubetext">AKIRA</p>
-              <p class="cubetext">WONG</p>
-              <p class="cubetext">WEB DEV</p>
-              <p class="cubetext">JS</p>
-              <p class="cubetext">RUBY</p>
-              <p class="cubetext">NODE</p>
-              <p class="cubetext">VIM</p>
-              <p class="cubetext">ETC</p>
+        <div class="cube-container">
+          <div class="cube">
+            <div class="front">
+              <div class="f-cont">
+                <p class="cubetext">AKIRA</p>
+                <p class="cubetext">WONG</p>
+                <p class="cubetext">WEB DEV</p>
+                <p class="cubetext">JS</p>
+                <p class="cubetext">RUBY</p>
+                <p class="cubetext">NODE</p>
+                <p class="cubetext">VIM</p>
+                <p class="cubetext">ETC</p>
+              </div>
             </div>
+            <div class="bottom"></div>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="right"></div>
           </div>
-          <div class="bottom"></div>
-          <div class="top"></div>
-          <div class="left"></div>
-          <div class="right"></div>
+        </div>
+      </div>
+
+      <div id="hero2" class="hero hero2">
+
+        <div class="cube-container">
+          <div class="cube">
+            <div class="front">
+              <div class="f-cont">
+                <p class="cubetext email bottom-text">AKIRA@</p>
+                <p class="cubetext email">AWONGH.COM</p>
+                <p class="cubetext link">
+                  <a href="https://stackoverflow.com/users/271932/awongh" target="_blank">STACKOVERFLOW</a>
+                </p>
+                <p class="cubetext link">
+                  <a href="https://github.com/awongh" target="_blank">GITHUB</a>
+                </p>
+                <p class="cubetext link">
+                  <a href="https://www.linkedin.com/in/awongh/" target="_blank">LINKEDIN</a>
+                </p>
+                <p class="cubetext link">
+                  <a href="https://twitter.com/awongh" target="_blank">TWITTER</a>
+                </p>
+
+              </div>
+            </div>
+            <div class="bottom"></div>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div id="hero2" class="hero hero2">
-
-      <div class="cube-container">
-        <div class="cube">
-          <div class="front">
-            <div class="f-cont">
-              <p class="cubetext email bottom-text">AKIRA@</p>
-              <p class="cubetext email">AWONGH.COM</p>
-              <p class="cubetext mojilink">
-                <a href="http://&#x1F611;&#x1F611;&#x1F611;.ws" target="_blank">&#x1F611;&#x1F611;&#x1F611;.ws</a>
-              </p>
-              <p class="cubetext link">
-                <a href="https://stackoverflow.com/users/271932/awongh" target="_blank">STACKOVERFLOW</a>
-              </p>
-              <p class="cubetext link">
-                <a href="https://github.com/awongh" target="_blank">GITHUB</a>
-              </p>
-              <p class="cubetext link">
-                <a href="https://www.linkedin.com/in/awongh/" target="_blank">LINKEDIN</a>
-              </p>
-              <p class="cubetext link">
-                <a href="https://twitter.com/awongh" target="_blank">TWITTER</a>
-              </p>
-
-            </div>
-          </div>
-          <div class="bottom"></div>
-          <div class="top"></div>
-          <div class="left"></div>
-          <div class="right"></div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
   </div>
-</div>
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-  crossorigin="anonymous"></script>
+    </script>
 
-<script>
-/*
-
-  function foo(){
-    document.querySelector('.front').classList.add('front-move');
-    document.querySelector('.top').classList.add('top-move');
-    document.querySelector('.bottom').classList.add('bottom-move');
-    document.querySelector('.left').classList.add('left-move');
-    document.querySelector('.right').classList.add('right-move');
-  }
-
-  var controller = new ScrollMagic.Controller({container: "body", loglevel: 3});
-  // build scene
-  new ScrollMagic.Scene({triggerElement: "#hero2"})
-
-          .duration(5000)
-          // trigger animation by adding a css class
-          .setClassToggle("#animate1", "zap")
-          .addIndicators({name: "1 - add a class"}) // add indicators (requires plugin)
-          .addTo(controller);
-*/
-
-
-
-var colors = new Array(
-  [62,35,255],
-  [60,255,60],
-  [255,35,98],
-  [45,175,230],
-  [255,0,255],
-  [255,128,0]);
-
-var step = 0;
-//color table indices for: 
-// current color left
-// next color left
-// current color right
-// next color right
-var colorIndices = [0,1,2,3];
-
-//transition speed
-var gradientSpeed = 0.002;
-
-function updateGradient(){
-
-  if ( $===undefined ) return;
-
-  var c0_0 = colors[colorIndices[0]];
-  var c0_1 = colors[colorIndices[1]];
-  var c1_0 = colors[colorIndices[2]];
-  var c1_1 = colors[colorIndices[3]];
-
-  var istep = 1 - step;
-  var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-  var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-  var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-  var color1 = "rgb("+r1+","+g1+","+b1+")";
-
-  var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-  var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-  var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-  var color2 = "rgb("+r2+","+g2+","+b2+")";
-
- $('#gradient').css({
-   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-
-  step += gradientSpeed;
-  if ( step >= 1 )
-  {
-    step %= 1;
-    colorIndices[0] = colorIndices[1];
-    colorIndices[2] = colorIndices[3];
-
-    //pick two new target color indices
-    //do not pick the same as the current one
-    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-
-  }
-}
-
-</script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-11316091-1', 'auto'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-</body>
+    <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-11316091-1', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-<!--
-
-
-
-/* START APP STYLES */
-#gradient
-{
-  width: 100%;
-  height: 800px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.cube-container {
-  perspective: 2000px;
-  perspective-origin: 50% 50%;
-}
-.cube {
-  transform: rotateX( 13deg ) rotateY( 13deg ) rotateZ(-2deg);
-
-  transform-style: preserve-3d;
-  > div {
-    backface-visibility: show;
-  }
-}
-.cube .front  {
-  background-color:white; transform: rotateY(   0deg ) translateZ( 100px );
-}
-.cube .back   {
-  transform: rotateX( 180deg ) translateZ( 100px );
-}
-.cube .right  {
-  transform: rotateY(  90deg ) translateZ( 100px );
-}
-.cube .left   {
-  transform: rotateY( -90deg ) translateZ( 100px );
-}
-.cube .top    {
-  height:200px;
-  transform: rotateX(  90deg ) translateZ( 100px );
-}
-.cube .bottom {
-  height:200px;
-  transform: rotateX( -90deg ) translateZ( 400px );
-}
-
-
-body {
-  font-family: 'Muli', sans-serif;
-  background: blue;
-  font-family: sans-serif;
-  font-weight:800;
-}
-.cube-container {
-  width: 200px; height: 500px;
-  left: 50%; top: 50%;
-  position: absolute;
-  transform: translate(-50%, -58%);
-  transition: perspective 700ms;
-}
-.cube {
-  width: 100%; height: 100%;
-  position: absolute;
-  transition: transform 700ms;
-}
-.cube > div {
-  height: 100%; width: 100%;
-  background-color: rgba(256,256,256,0.4);
-
-  color: blue;
-  border: none;
-  position: absolute;
-  font-size: 30px;
-  text-align: center;
-}
-.cube > .front{
-  background-color: rgba(256, 256, 256, .8);
-}
-
-.cube > .bottom{
-  background-color: rgba(246,246,246,0.8);
-}
-
-.cubetext{
-  margin:10px;
-  padding:10px;
-  letter-spacing:7px;
-}
-
-.container {
-  width: 100%;
-  padding: 10px 10px;
-  margin-right: auto;
-  margin-left: auto;
-  position:relative;
-}
-.hero{
-  margin:20px 20px 20px 20px;
-  min-height:550px;
-  padding:15px 10px;
-  position:relative;
-}
-
-.hero1{
-  margin-bottom:55px;
-}
-
-.hero2{
-
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 340px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.cube-container {
-  perspective: 2000px;
-  perspective-origin: 50% 50%;
-}
-.cube {
-  transform: rotateX( 13deg ) rotateY( 13deg ) rotateZ(-2deg);
-
-  transform-style: preserve-3d;
-  > div {
-    backface-visibility: show;
-  }
-}
-.cube .front  {
-  transition: 4s ease-in-out;
-  background-color:white; transform: rotateY(   0deg ) translateZ( 100px );
-}
-.cube .back   {
-  transition: 4s ease-in-out;
-  transform: rotateX( 180deg ) translateZ( 100px );
-}
-.cube .right  {
-  transition: 4s ease-in-out;
-  transform: rotateY(  90deg ) translateZ( 100px );
-}
-.cube .left   {
-  transition: 4s ease-in-out;
-  transform: rotateY( -90deg ) translateZ( 100px );
-}
-.cube .top    {
-  transition: 4s ease-in-out;
-  height:200px;
-  transform: rotateX(  90deg ) translateZ( 100px );
-}
-.cube .bottom {
-  transition: 4s ease-in-out;
-  height:200px;
-  transform: rotateX( -90deg ) translateZ( 400px );
-}
-
-
-body {
-  font-family: 'Muli', sans-serif;
-  background: blue;
-  color: rgba(255,255,255,0.8);
-  font-family: sans-serif;
-  font-weight:800;
-}
-.cube-container {
-  width: 200px; height: 500px;
-  left: 50%; top: 50%;
-  position: absolute;
-  transform: translate(-50%, -58%);
-  transition: perspective 700ms;
-}
-.cube {
-  width: 100%; height: 100%;
-  position: absolute;
-  transition: transform 700ms;
-}
-.cube > div {
-  height: 100%; width: 100%;
-  background-color: rgba(256,256,256,0.4);
-
-  color: blue;
-  border: none;
-  position: absolute;
-  font-size: 30px;
-  text-align: center;
-}
-.cube > .front{
-  background-color: rgba(179, 186, 204, .8);
-}
-
-.cube > .bottom{
-  background-color: rgba(246,246,246,0.8);
-}
-
-.cubetext{
-  margin:10px;
-  padding:10px;
-  letter-spacing:7px;
-}
-
-
-
-.container {
-  background-color:yellow;
-  width: 100%;
-  padding: 10px 10px;
-  margin-right: auto;
-  margin-left: auto;
-  position:relative;
-}
-.hero{
-  background-color:pink;
-  margin:20px 20px 20px 20px;
-  min-height:550px;
-  padding:15px 10px;
-  position:relative;
-}
-
-.hero1{
-  margin-bottom:55px;
-}
-
-.hero2{
-
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 340px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-  }
-}
-
-
-
-.cube{
-  transition: 4s ease-in-out;
-}
-.cube .front-move{
-  transform: rotateY( 0deg ) translateZ( 8px );
-}
-.cube .right-move{
-  width:40%;
-  transform: rotateY( 90deg ) translateZ( 160px ) translateX(30px);
-}
-.cube .left-move{
-
-  width:40%;
-  transform: rotateY( -90deg ) translateZ( 40px ) translateX( -35px);
-}
-.cube .top-move{
-  height:18%;
-  transform: rotateX(  90deg ) translateZ( 45px ) translateY( -37px);
-}
-.cube .bottom-move {
-  height:20%;
-  transform: rotateX( -90deg ) translateZ( 450px ) translateY(40px);
-}
-
-
-
-
-
-
-
-#animate1 {
-  transition: transform 3s ease-out;
-    position:absolute;
-}
-.zap {
-  transform: scale(2.5, 0);
-}
-</style>
-</head>
-
-<body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
